@@ -51,7 +51,17 @@ public class Main {
         infoAuto.add(bus1);
         infoAuto.add(bus2);
 
+        Map<Transport, Mechanics> transportMechanicsHashMap = new HashMap<>();
+        transportMechanicsHashMap.put(car1, mechanics4);
+        transportMechanicsHashMap.put(car2, mechanics1);
+        transportMechanicsHashMap.put(truck1, mechanics2);
+        transportMechanicsHashMap.put(truck2, mechanics3);
+        transportMechanicsHashMap.put(bus1, mechanics4);
+        transportMechanicsHashMap.put(bus2, mechanics2);
 
+        for (Map.Entry<Transport, Mechanics> transportMechanicsEntry: transportMechanicsHashMap.entrySet()) {
+            System.out.println("Механик " + transportMechanicsEntry.getValue() + " обслуживает машину " + transportMechanicsEntry.getKey());
+        }
 
 //        ServiceStation serviceStation = new ServiceStation();
 //        serviceStation.addToQueue(car2);
